@@ -1,0 +1,16 @@
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\bin\Debug\net6.0\LeaveManagementSystem.Application.deps.json
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\bin\Debug\net6.0\LeaveManagementSystem.Application.dll
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\bin\Debug\net6.0\LeaveManagementSystem.Application.pdb
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\bin\Debug\net6.0\LeaveManagementSystem.Domain.dll
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\bin\Debug\net6.0\LeaveManagementSystem.Domain.pdb
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\obj\Debug\net6.0\LeaveManagementSystem.Application.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\obj\Debug\net6.0\LeaveManagementSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\obj\Debug\net6.0\LeaveManagementSystem.Application.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\obj\Debug\net6.0\LeaveManagementSystem.Application.AssemblyInfo.cs
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\obj\Debug\net6.0\LeaveManagementSystem.Application.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\obj\Debug\net6.0\LeaveManagementSystem.Application.sourcelink.json
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\obj\Debug\net6.0\LeaveMan.E99A58D0.Up2Date
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\obj\Debug\net6.0\LeaveManagementSystem.Application.dll
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\obj\Debug\net6.0\refint\LeaveManagementSystem.Application.dll
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\obj\Debug\net6.0\LeaveManagementSystem.Application.pdb
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Application\obj\Debug\net6.0\ref\LeaveManagementSystem.Application.dll

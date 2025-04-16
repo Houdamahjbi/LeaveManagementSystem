@@ -1,83 +1,64 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Infrastructure.Data;
+using LeaveManagementSystem.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace LeaveManagementSystem.Api.Controller
 {
-    public class LeaveRequestsController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class LeaveRequestsController : ControllerBase 
     {
-        // GET: LeaveRequestsController
-        public ActionResult Index()
+        private readonly AppDbContext _context;
+
+        public LeaveRequestsController(AppDbContext context)
         {
-            return View();
+            _context = context;
         }
 
-        // GET: LeaveRequestsController/Details/5
-        public ActionResult Details(int id)
+        // GET: api/leaverequests
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<LeaveRequest>>> Get()
         {
-            return View();
+            return Ok(await _context.LeaveRequests.ToListAsync());
         }
 
-        // GET: LeaveRequestsController/Create
-        public ActionResult Create()
+        // GET: api/leaverequests/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<LeaveRequest>> Get(int id)
         {
-            return View();
+            var request = await _context.LeaveRequests.FindAsync(id);
+            return request == null ? NotFound() : Ok(request);
         }
 
-        // POST: LeaveRequestsController/Create
+        // POST: api/leaverequests
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult<LeaveRequest>> Post([FromBody] LeaveRequest request)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            _context.LeaveRequests.Add(request);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(Get), new { id = request.Id }, request);
         }
 
-        // GET: LeaveRequestsController/Edit/5
-        public ActionResult Edit(int id)
+        // PUT: api/leaverequests/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, [FromBody] LeaveRequest request)
         {
-            return View();
+            if (id != request.Id) return BadRequest();
+            _context.Entry(request).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return NoContent();
         }
 
-        // POST: LeaveRequestsController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        // DELETE: api/leaverequests/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: LeaveRequestsController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: LeaveRequestsController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            var request = await _context.LeaveRequests.FindAsync(id);
+            if (request == null) return NotFound();
+            _context.LeaveRequests.Remove(request);
+            await _context.SaveChangesAsync();
+            return NoContent();
         }
     }
 }

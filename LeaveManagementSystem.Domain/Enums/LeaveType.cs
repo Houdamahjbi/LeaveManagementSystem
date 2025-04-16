@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace LeaveManagementSystem.Domain.Enums
 {
-    internal class LeaveType
+    public enum LeaveType
     {
+        Annual,   // Congé annuel
+        Sick,     // Congé maladie
+        Other     // Autre type
     }
 }

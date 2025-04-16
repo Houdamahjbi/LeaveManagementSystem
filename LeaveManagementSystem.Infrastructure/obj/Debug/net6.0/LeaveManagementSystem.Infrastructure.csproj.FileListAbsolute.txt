@@ -1,0 +1,6 @@
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Infrastructure\obj\Debug\net6.0\LeaveManagementSystem.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Infrastructure\obj\Debug\net6.0\LeaveManagementSystem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Infrastructure\obj\Debug\net6.0\LeaveManagementSystem.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Infrastructure\obj\Debug\net6.0\LeaveManagementSystem.Infrastructure.AssemblyInfo.cs
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Infrastructure\obj\Debug\net6.0\LeaveManagementSystem.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Infrastructure\obj\Debug\net6.0\LeaveManagementSystem.Infrastructure.sourcelink.json

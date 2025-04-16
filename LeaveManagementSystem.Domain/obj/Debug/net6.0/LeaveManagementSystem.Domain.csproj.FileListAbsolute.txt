@@ -1,0 +1,13 @@
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\bin\Debug\net6.0\LeaveManagementSystem.Domain.deps.json
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\bin\Debug\net6.0\LeaveManagementSystem.Domain.dll
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\bin\Debug\net6.0\LeaveManagementSystem.Domain.pdb
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\obj\Debug\net6.0\LeaveManagementSystem.Domain.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\obj\Debug\net6.0\LeaveManagementSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\obj\Debug\net6.0\LeaveManagementSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\obj\Debug\net6.0\LeaveManagementSystem.Domain.AssemblyInfo.cs
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\obj\Debug\net6.0\LeaveManagementSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\obj\Debug\net6.0\LeaveManagementSystem.Domain.sourcelink.json
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\obj\Debug\net6.0\LeaveManagementSystem.Domain.dll
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\obj\Debug\net6.0\refint\LeaveManagementSystem.Domain.dll
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\obj\Debug\net6.0\LeaveManagementSystem.Domain.pdb
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\obj\Debug\net6.0\ref\LeaveManagementSystem.Domain.dll

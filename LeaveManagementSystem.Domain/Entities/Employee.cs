@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeaveManagementSystem.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +13,7 @@ namespace LeaveManagementSystem.Domain
         public string FullName { get; set; }
         public string Department { get; set; }
         public DateTime JoiningDate { get; set; }
+        public ICollection<LeaveRequest> LeaveRequests { get; set; } = new List<LeaveRequest>();
+
     }
 }
