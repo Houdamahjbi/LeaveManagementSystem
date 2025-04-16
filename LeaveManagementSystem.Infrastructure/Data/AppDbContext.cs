@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using LeaveManagementSystem.Domain;
 
-namespace LeaveManagementSystem.Infrastructure.Data
+namespace Infrastructure.Data
 {
-    internal class AppDbContext
+    public class AppDbContext : DbContext
     {
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<LeaveRequest> LeaveRequests { get; set; }
     }
 }
