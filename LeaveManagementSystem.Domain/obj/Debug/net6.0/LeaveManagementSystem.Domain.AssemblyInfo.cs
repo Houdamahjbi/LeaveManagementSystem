@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("LeaveManagementSystem.Api")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("LeaveManagementSystem.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0354a2dadcdac79386ef00550a22d00acf8caa0")]
-[assembly: System.Reflection.AssemblyProductAttribute("LeaveManagementSystem.Api")]
-[assembly: System.Reflection.AssemblyTitleAttribute("LeaveManagementSystem.Api")]
+[assembly: System.Reflection.AssemblyProductAttribute("LeaveManagementSystem.Domain")]
+[assembly: System.Reflection.AssemblyTitleAttribute("LeaveManagementSystem.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Généré par la classe MSBuild WriteCodeFragment.

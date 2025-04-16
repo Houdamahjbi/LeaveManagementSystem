@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "jJLLXmeeHOF1GWatiG8mpzpRw4Vs9meABTVYXFFAV9wm5wPzKLdUY0hNiWSJwq6QbJSSMJaxOxb6GXcM0b3F5w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\Test.Net\\LeaveManagementSystem.Api\\LeaveManagementSystem.Infrastructure\\LeaveManagementSystem.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
+  ],
+  "logs": []
+}
