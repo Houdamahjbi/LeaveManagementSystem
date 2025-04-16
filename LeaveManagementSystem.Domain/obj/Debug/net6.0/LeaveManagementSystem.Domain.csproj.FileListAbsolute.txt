@@ -11,3 +11,5 @@ C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Dom
 C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\obj\Debug\net6.0\refint\LeaveManagementSystem.Domain.dll
 C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\obj\Debug\net6.0\LeaveManagementSystem.Domain.pdb
 C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\obj\Debug\net6.0\ref\LeaveManagementSystem.Domain.dll
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\bin\Debug\net6.0\LeaveManagementSystem.Domain.runtimeconfig.json
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Domain\obj\Debug\net6.0\LeaveManagementSystem.Domain.genruntimeconfig.cache
