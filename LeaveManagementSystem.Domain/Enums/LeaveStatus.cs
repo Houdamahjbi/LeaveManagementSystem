@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace LeaveManagementSystem.Domain.Enums
 {
-    internal class LeaveStatus
+    public enum LeaveStatus
     {
+        Pending,  // En attente
+        Approved, // Approuvé
+        Rejected  // Rejeté
     }
 }
