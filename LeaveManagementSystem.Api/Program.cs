@@ -30,12 +30,12 @@ using (var scope = app.Services.CreateScope())
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    dbContext.Database.EnsureDeleted(); // Supprime la base de données existante
-    dbContext.Database.Migrate(); // Applique les migrations
+    dbContext.Database.EnsureDeleted(); 
+    dbContext.Database.Migrate(); 
 }
 // Middleware Ordering Fix
-app.UseRouting();       // 👈 Doit être avant MapControllers()
+app.UseRouting();       
 app.UseSwagger();
 app.UseSwaggerUI();
-app.MapControllers();   // 👈 Active les contrôleurs
+app.MapControllers();  
 app.Run();
