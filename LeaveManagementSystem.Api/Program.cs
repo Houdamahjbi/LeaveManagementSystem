@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Infrastructure.Data;
+using LeaveManagementSystem.Application.Mapping;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +14,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
-
+builder.Services.AddAutoMapper(typeof(LeaveRequestProfile));
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -26,7 +27,12 @@ using (var scope = app.Services.CreateScope())
     var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     dbContext.Database.Migrate();
 }
-
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    dbContext.Database.EnsureDeleted(); // Supprime la base de données existante
+    dbContext.Database.Migrate(); // Applique les migrations
+}
 // Middleware Ordering Fix
 app.UseRouting();       // 👈 Doit être avant MapControllers()
 app.UseSwagger();
