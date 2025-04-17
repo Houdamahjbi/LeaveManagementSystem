@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\LeaveManagementSystem.Api.props" />
-</Project>
