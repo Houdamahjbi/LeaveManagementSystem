@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LeaveManagementSystem.Domain.Enums;
 
-namespace LeaveManagementSystem.Application.DTOs
+namespace LeaveManagementSystem.Application.DTOs;
+
+public class EmployeeDTO
 {
-    public class EmployeeDTO
-    {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
-        public DateTime DateOfBirth { get; set; }
-        public int DepartmentId { get; set; }
-        // Optionnel : Nom du département pour les réponses
-        public string DepartmentName { get; set; }
-    }
+    public int Id { get; set; }
+    public string FullName { get; set; }
+    public string Department { get; set; }
+    public string DepartmentName => Department.ToString();
+    public DateTime JoiningDate { get; set; }
 }

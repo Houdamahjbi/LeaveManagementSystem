@@ -73,3 +73,5 @@ C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Api
 C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Api\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Api\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Api\bin\Debug\net6.0\MediatR.dll
+C:\Users\HP\Desktop\Test.Net\LeaveManagementSystem.Api\LeaveManagementSystem.Api\bin\Debug\net6.0\MediatR.Contracts.dll

@@ -1,14 +1,16 @@
 ﻿using AutoMapper;
-using LeaveManagementSystem.Application.DTOs;
 using LeaveManagementSystem.Domain.Entities;
+using LeaveManagementSystem.Application.DTOs;
+using LeaveManagementSystem.Domain;
 
-namespace LeaveManagementSystem.Application.Mapping
+namespace LeaveManagementSystem.Application.Mapping;
+
+public class MappingProfile : Profile
 {
-    public class LeaveRequestProfile : Profile
+    public MappingProfile()
     {
-        public LeaveRequestProfile()
-        {
-            CreateMap<CreateLeaveRequestDTO, LeaveRequest>();
-        }
+        CreateMap<Employee, EmployeeDTO>()
+            .ForMember(dest => dest.DepartmentName,
+                opt => opt.MapFrom(src => src.Department.ToString()));
     }
 }

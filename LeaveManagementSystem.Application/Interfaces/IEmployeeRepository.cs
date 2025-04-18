@@ -1,16 +1,13 @@
 ﻿using LeaveManagementSystem.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using LeaveManagementSystem.Domain.Entities;
 
-namespace LeaveManagementSystem.Application.Interfaces
+namespace LeaveManagementSystem.Application.Interfaces;
+
+public interface IEmployeeRepository
 {
-    public interface IEmployeeRepository
-    {
-        Task<Employee> GetByIdAsync(int id);
-        Task AddAsync(Employee employee);
-      
-    }
+    Task AddAsync(Employee employee);
+    Task UpdateAsync(Employee employee);
+    Task DeleteAsync(Employee employee);
+    Task<Employee> GetByIdAsync(int id);
+    Task<List<Employee>> GetAllAsync();
 }

@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore; 
-using Infrastructure.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using LeaveManagementSystem.Domain.Entities;
 using LeaveManagementSystem.Application.Interfaces;
+using Infrastructure.Data;
 using LeaveManagementSystem.Domain;
 
-namespace MyApp.Infrastructure.Repositories;
+namespace LeaveManagementSystem.Infrastructure.Repositories;
 
 public class EmployeeRepository : IEmployeeRepository
 {
@@ -20,11 +21,25 @@ public class EmployeeRepository : IEmployeeRepository
         await _context.SaveChangesAsync();
     }
 
-    // Implémentation manquante de l'interface
-    public async Task<Employee?> GetByIdAsync(int id)
+    public async Task UpdateAsync(Employee employee)
     {
-        return await _context.Employees
-            .Include(e => e.Department) // Si vous avez une relation avec Department
-            .FirstOrDefaultAsync(e => e.Id == id);
+        _context.Employees.Update(employee);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task DeleteAsync(Employee employee)
+    {
+        _context.Employees.Remove(employee);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task<Employee> GetByIdAsync(int id)
+    {
+        return await _context.Employees.FindAsync(id);
+    }
+
+    public async Task<List<Employee>> GetAllAsync()
+    {
+        return await _context.Employees.ToListAsync();
     }
 }

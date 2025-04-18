@@ -1,44 +1,47 @@
 ﻿using AutoMapper;
 using Infrastructure.Data;
 using LeaveManagementSystem.Application.Features.Commands.Employees;
+using LeaveManagementSystem.Application.Interfaces;
 using LeaveManagementSystem.Application.Mapping;
+using LeaveManagementSystem.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add Controllers (Critical Missing Line)
-builder.Services.AddControllers();  // 👈 Add this
-// Ajoutez MediatR
-builder.Services.AddMediatR(cfg =>
-    cfg.RegisterServicesFromAssembly(typeof(CreateEmployeeCommand).Assembly));
-// Database Configuration
+// Contrôleurs
+builder.Services.AddControllers();
+
+// Base de données
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Repository
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
+// MediatR (Configuration Unique)
+builder.Services.AddMediatR(cfg =>
+    cfg.RegisterServicesFromAssembly(typeof(UpdateEmployeeCommand).Assembly));
+
 // AutoMapper
-builder.Services.AddAutoMapper(typeof(Program));
-builder.Services.AddAutoMapper(typeof(LeaveRequestProfile));
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Automatic Migrations (Development Only)
-using (var scope = app.Services.CreateScope())
+// Migrations (Dev uniquement)
+if (app.Environment.IsDevelopment())
 {
+    using var scope = app.Services.CreateScope();
     var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     dbContext.Database.Migrate();
 }
-using (var scope = app.Services.CreateScope())
-{
-    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    dbContext.Database.EnsureDeleted(); 
-    dbContext.Database.Migrate(); 
-}
-// Middleware Ordering Fix
-app.UseRouting();       
+
+// Middleware
+app.UseRouting();
 app.UseSwagger();
 app.UseSwaggerUI();
-app.MapControllers();  
+app.MapControllers();
 app.Run();

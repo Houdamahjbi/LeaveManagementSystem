@@ -1,83 +1,78 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using LeaveManagementSystem.Application.Features.Commands.Employees;
+using LeaveManagementSystem.Application.Features.Queries.Employees;
+using LeaveManagementSystem.Application.DTOs;
 
-namespace LeaveManagementSystem.Api.Controller
+namespace LeaveManagementSystem.API.Controllers
 {
-    public class EmployeesController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class EmployeesController : ControllerBase
     {
-        // GET: EmployeesController
-        public ActionResult Index()
+        private readonly IMediator _mediator;
+
+        public EmployeesController(IMediator mediator)
         {
-            return View();
+            _mediator = mediator;
         }
 
-        // GET: EmployeesController/Details/5
-        public ActionResult Details(int id)
+        // GET: api/employees
+        [HttpGet]
+        public async Task<ActionResult<List<EmployeeDTO>>> GetAllEmployees()
         {
-            return View();
+            var query = new GetAllEmployeesQuery();
+            var result = await _mediator.Send(query);
+            return Ok(result);
         }
 
-        // GET: EmployeesController/Create
-        public ActionResult Create()
+        // GET: api/employees/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<EmployeeDTO>> GetEmployeeById(int id)
         {
-            return View();
+            var query = new GetEmployeeByIdQuery(id);
+            var result = await _mediator.Send(query);
+
+            return result != null
+                ? Ok(result)
+                : NotFound();
         }
 
-        // POST: EmployeesController/Create
+        // POST: api/employees
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult<int>> CreateEmployee([FromBody] CreateEmployeeCommand createDto)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            var command = new CreateEmployeeCommand(
+                createDto.FullName,
+                createDto.Department,
+                createDto.JoiningDate
+            );
+
+            var employeeId = await _mediator.Send(command);
+            return CreatedAtAction(nameof(GetEmployeeById), new { id = employeeId }, employeeId);
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateEmployee(int id, [FromBody] UpdateEmployeeDTO updateDto)
+        {
+            var command = new UpdateEmployeeCommand(
+                id,
+                updateDto.FullName,
+                updateDto.Department,
+                updateDto.JoiningDate
+            );
+
+            var result = await _mediator.Send(command);
+            return Ok(result); // Retourne 200 OK avec le message
         }
 
-        // GET: EmployeesController/Edit/5
-        public ActionResult Edit(int id)
+        // DELETE: api/employees/5
+  
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteEmployee(int id)
         {
-            return View();
-        }
-
-        // POST: EmployeesController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: EmployeesController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: EmployeesController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            var command = new DeleteEmployeeCommand(id);
+            var result = await _mediator.Send(command);
+            return Ok(result); // Retourne 200 OK avec le message
         }
     }
 }
