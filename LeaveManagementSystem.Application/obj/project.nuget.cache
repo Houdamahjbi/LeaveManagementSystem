@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "4ReuI5heL37Bsjig/igiHmQwYhfZjV0rGH2h4z3jmYKnlLNjaZ5deqqaSK/GL+rIk3WFqVUouBuRzWtFTkyo0w==",
+  "dgSpecHash": "JMgVX3JNxT+mX5zFpsoJe5HUpo4SdFaWTk5iWgAvIDtSLLqUBaaMZafRPQPNGZC47vJTV/fFFCngPGZdqDvZRg==",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Desktop\\Test.Net\\LeaveManagementSystem.Api\\LeaveManagementSystem.Application\\LeaveManagementSystem.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\automapper\\8.1.1\\automapper.8.1.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\6.1.1\\automapper.extensions.microsoft.dependencyinjection.6.1.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.7\\microsoft.data.sqlite.core.6.0.7.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.32\\microsoft.entityframeworkcore.6.0.32.nupkg.sha512",

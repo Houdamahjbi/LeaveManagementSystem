@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Infrastructure.Data;
+using LeaveManagementSystem.Application.Features.Commands.Employees;
 using LeaveManagementSystem.Application.Mapping;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,7 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add Controllers (Critical Missing Line)
 builder.Services.AddControllers();  // 👈 Add this
-
+// Ajoutez MediatR
+builder.Services.AddMediatR(cfg =>
+    cfg.RegisterServicesFromAssembly(typeof(CreateEmployeeCommand).Assembly));
 // Database Configuration
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeaveManagementSystem.Application.Features.Employee.Commands
+namespace LeaveManagementSystem.Application.Features.Commands.Employees
 {
     internal class DeleteEmployeeCommand
     {

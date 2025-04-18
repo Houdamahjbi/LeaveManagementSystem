@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace LeaveManagementSystem.Domain.Enums
 {
-    internal class DepartmentType
+    public enum DepartmentType
     {
+        HR,
+        IT,
+        Finance,
+        Marketing,
+        Sales,
+        Engineering
     }
 }
